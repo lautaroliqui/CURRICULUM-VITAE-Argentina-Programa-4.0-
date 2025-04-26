@@ -1,0 +1,943 @@
+body{
+    font-family: Cambria, "Muli", "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%2319d6ff' fill-opacity='0.1'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    color:#fff;
+}
+
+.container{
+    width: 90%;
+    margin-top: 15px;
+}
+
+header{
+    margin-top: 15px;
+    padding-top: 5px;
+    text-align: center;
+    background-color: #5D5E5D;
+    border: 1px solid #fff;
+}
+
+.intro{
+    width: 100%;
+    display: inline-block;
+    background-color: #256b7b;
+    border: 3px solid #fff;
+}
+
+.columnLeft{
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.columnLeft .profile{
+    width: 50%;
+    border-radius: 100%;
+}
+.intro .columnRight{
+    float: left;
+    width: 50%;
+}
+.columnRight .data{
+    border-bottom: 1px solid #fff;
+    align-items: center;
+}
+
+
+
+.gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.gallery .columnLeft2{
+    border: 3px solid #fff;
+    background-color:#256b7b;
+}
+.gallery .columnLeft2 h2{
+    border-bottom: 1px solid #fff;
+    text-align: center;
+}
+.gallery .columnLeft2 .contactInformation{
+    list-style: none;
+}
+
+
+.gallery .columnRight2{
+    color: #000000;
+    background-color: #fff;
+    border: 3px solid #fff;
+}
+.gallery .columnRight2 h5{
+    color:#2c9dde;
+}
+
+.gallery .columnRight2 h2{
+    color: #19bbd5;
+    border-bottom: 1px solid #19bbd5;
+}
+.gallery .columnRight2 h4{
+    color: #00e1c6;
+    border-bottom:1px solid #00e1c6 ;
+}
+
+
+
+
+footer{
+    width: 100%;
+    text-align: center;
+    background-color: #717070;
+ 
+}
+.footer{
+    width: 100%;
+    border: 3px solid #fff;
+}
+.button{
+	font-weight: bold;
+	letter-spacing: .2rem;
+	border: 3px solid #FFFFFF;
+	transition: all 0.3s linear;
+}
+.button:hover{
+    background-color: #256b7b;
+    cursor: pointer;
+}
+
+
+/* Primera Interfaz: Formulario Contactame*/
+#interface{
+    display: none;
+    transition: opacity 0.5s ease;
+    position: fixed;
+    width: 70%;
+    height: 50%;
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* Configuraciones para el Diseño del Formulario */
+.contact{
+    height: 100%;
+}
+.col-md-3{
+    background: #19bbd5;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.contact-info{
+    margin-top:10%;
+}
+.contact-info img{
+    margin-bottom: 15%;
+}
+.contact-info h2{
+    margin-bottom: 10%;
+}
+.col-md-9{
+    border: 1px solid #19bbd5;
+    background: #fff;
+    padding: 3%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.contact-form label{
+    font-weight:600;
+}
+
+.close-icon {
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    float: right;
+}
+
+.col-sm-10{
+    text-align: right;
+}
+.contact-form button{
+    margin-top:1rem ;
+    background: #25274d;
+    color: #fff;
+    font-weight: 600;
+    width: 25%;
+}
+.contact-form button:hover{
+    color: #25274d;
+}
+.contact-form button:focus{
+    box-shadow:none;
+}
+
+
+
+/*Segunda Interfaz: Interfaz de Verificación*/
+#interface2{
+    display: none;
+    transition: opacity 0.5s ease;
+    position: fixed;
+    width: 80%;
+    height: 50%;
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.notify{
+    background: #19bbd5;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    width: 100%;
+}
+.notify img{
+    float: left;
+    padding-left: 1%;
+}
+.notify h2{
+    margin: 0;
+    margin-top: 1%;
+    padding-top: 1%;
+    text-align: center;
+    padding-bottom: 1%;
+}
+.notify-ms{
+    text-align: center;
+    border: 1px solid #19bbd5;
+    background: #fff;
+    padding: 3%;
+    border-bottom-left-radius: 0.5rem ;
+    border-bottom-right-radius: 0.5rem;
+    color: #000;
+}
+.close-icon2 {
+    padding: 1%;
+    font-size: 1.5rem;
+    color: #000;
+    cursor: pointer;
+    float: right;
+}
+
+
+
+/* Los primeros 3 Media Queries estan adaptados para pantallas pequeñas mientras que los demas estan hecho para pantallas medianas/grandes */
+
+@media (min-width: 0px) and (max-width: 300px){
+    .intro .columnLeft{
+        width: 100%;
+        padding: .5em;
+        border-bottom: 3px solid #fff;
+    }
+    .intro .columnLeft .profile{
+        width: 70%;
+    }
+    .intro .columnRight{
+        width: 100%;
+        padding: .5em;
+    }
+    .intro .columnRight .email{
+        font-size: .6rem;
+    }
+    .intro .columnRight .data{
+        text-align: center;
+    }
+    .intro .columnRight svg{
+        width: .8rem;
+    }
+
+
+
+    .gallery{
+        display: inline-block;
+    }
+    .gallery p{
+        text-align: justify;
+    }
+
+    .gallery .columnLeft2{
+        padding: .5em;
+    }
+    .gallery .columnLeft2 ul{
+        margin-left: 1em;
+        padding-left: 0em;
+    }
+    .gallery .columnLeft2 .contactInformation-email{
+        font-size: .7rem;
+    }
+    .gallery .columnLeft2 .webSite{
+        font-size: .8rem;
+    }
+
+
+
+    .gallery .columnRight2{
+        padding: .5em;
+    }
+    
+    .gallery .columnRight2 h4{
+        margin: 0.4em;
+    }
+    .gallery .columnRight2 li{
+        margin-left: 1.25em;
+    }
+
+
+
+    .footer{
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    .footer .button{
+        margin-right: .5em;
+        margin-left: .5em;
+        padding-top: 2.25em;
+        padding-right: .5em;
+        padding-bottom: 2.25em;
+        padding-left: .2em;
+        font-size: .8rem;
+    }
+    
+
+
+    
+    .col-md-3{
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0 ;
+    }
+    .col-md-9{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+    .contact-info{
+        text-align: center;
+        margin: 1%;
+    }
+    .contact-info img{
+        margin-bottom: 1%;
+    }
+    .contact-info h2{
+        margin-bottom: 15%;
+        text-align: left;
+        font-size: 1.1rem;
+    }
+    .contact-info h4{
+        font-size: 1rem;
+    }
+
+
+    .col-sm-10{
+        text-align: center;
+    }
+    .contact-form button{
+        margin-top:1rem ;
+        width: 75%;
+    }
+
+
+    .notify img{
+        padding-left: 1%;
+        width: 9%;
+    }
+
+    #interface{
+    top: 30%;
+    }
+
+}
+
+@media (min-width: 300px) and (max-width: 410px){
+    .intro .columnLeft{
+        width: 100%;
+        padding: .5em;
+        border-bottom: 3px solid #fff;
+    }
+    .intro .columnLeft .profile{
+        width: 70%;
+    }
+    .intro .columnRight{
+        width: 100%;
+        padding: .5em;
+    }
+    .intro .columnRight .data{
+        text-align: center;
+    }
+    .intro .columnRight svg{
+        width: .8rem;
+    }
+
+
+
+    .gallery{
+        display: inline-block;
+    }
+    .gallery p{
+        text-align: justify;
+    }
+
+    .gallery .columnLeft2{
+        padding: 1em;
+    }
+    .gallery .columnLeft2 h2{
+        margin: 0.2em 1.3em .3em;
+    }
+    .gallery .columnLeft2 ul{
+        margin-left: 1em;
+        padding-left: 0em;
+    }
+    .gallery .columnRight2{
+        padding: 1.2em;
+    }
+    
+    .gallery .columnRight2 h4{
+        margin: 0.4em;
+    }
+    .gallery .columnRight2 li{
+        margin-left: 1.25em;
+    }
+
+
+
+    .footer{
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    .footer .button{
+        margin-right: 2em;
+        margin-left: 2em;
+        padding-top: 2.25em;
+        padding-right: 1em;
+        padding-bottom: 2.25em;
+        padding-left: .8em;
+    }
+
+
+    .col-md-3{
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0 ;
+    }
+    .col-md-9{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+    .contact-info{
+        margin: 1%;
+    }
+    .contact-info img{
+        margin-bottom: 1%;
+    }
+    .contact-info h2{
+        margin-bottom: 1%;
+    }
+    .contact-info h4{
+        font-size: 1.5rem;
+    }
+    .notify img{
+        padding-left: 1%;
+        width: 9%;
+    }
+
+
+    
+    .col-md-3{
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0 ;
+    }
+    .col-md-9{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+    .contact-info{
+        margin: 1%;
+    }
+    .contact-info img{
+        margin-bottom: 1%;
+    }
+    .contact-info h2{
+        margin-bottom: 1%;
+    }
+    .contact-info h4{
+        font-size: 1.5rem;
+    }
+
+
+    .col-sm-10{
+        text-align: center;
+    }
+    .contact-form button{
+        margin-top:1rem ;
+        background: #25274d;
+        color: #fff;
+        width: 55%;
+    }
+
+
+    .notify img{
+        padding-left: 1%;
+        width: 9%;
+    }
+}
+
+@media (min-width: 410px) and (max-width: 768px){
+    .intro .columnLeft{
+        width: 100%;
+        padding: .5em;
+        border-bottom: 3px solid #fff;
+    }
+    .intro .columnLeft .profile{
+        width: 70%;
+    }
+    .intro .columnRight{
+        width: 100%;
+        padding: .5em;
+        line-height: 2em;
+        font-size: 1.25rem;
+    }
+    .intro .columnRight .data{
+        text-align: center;
+    }
+    .intro .columnRight svg{
+        width: 1rem;
+    }
+
+
+
+    .gallery{
+        display: inline-block;
+    }
+    .gallery p{
+        font-size: 1.25rem;
+        text-align: justify;
+    }
+    .gallery li{
+        font-size: 1rem;
+    }
+
+    .gallery .columnLeft2{
+        padding: 1em;
+    }
+    .gallery .columnLeft2 h2{
+        margin: 0.3em 1.3em .3em;
+    }
+    .gallery .columnLeft2 li{
+        margin-left: 1em;
+    }
+
+
+    .gallery .columnRight2{
+        padding: 1.2em;
+    }
+    .gallery .columnRight2 h2{
+        font-size: 2.25rem;
+    }
+    .gallery .columnRight2 h4{
+        margin: 0.4em;
+        font-size: 1.75rem;
+    }
+    .gallery .columnRight2 h5{
+        font-size: 24px;
+    }
+    .gallery .columnRight2 li{
+        margin-left: 1.25em;
+    }
+    .gallery .columnRight2 span{
+        font-size: 1em;
+    }
+
+
+
+    .footer{
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    .footer .button{
+        font-size: 1rem;
+        margin-right: 5em;
+        margin-left: 5em;
+        padding-top: 2.25em;
+        padding-right: 1em;
+        padding-bottom: 2.25em;
+        padding-left: 1em;
+    }
+
+    .col-md-3{
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0 ;
+    }
+    .col-md-9{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+    .contact-info{
+        margin: 1%;
+    }
+    .contact-info img{
+        margin-bottom: 1%;
+    }
+    .contact-info h2{
+        margin-bottom: 1%;
+    }
+    .contact-info h4{
+        font-size: 1.5rem;
+    }
+
+
+    .col-sm-10{
+        text-align: center;
+    }
+    .contact-form button{
+        margin-top:1rem ;
+        background: #25274d;
+        color: #fff;
+        width: 55%;
+    }
+
+
+    .notify img{
+        padding-left: 1%;
+        width: 9%;
+    }
+
+}
+
+@media (min-width:768px) and (max-width:992px){
+    .intro .columnLeft{
+        padding: .5em;
+    }
+    .intro .columnLeft .profile{
+        width: 60%;
+    }
+    .intro .columnRight{
+        padding: .5em;
+        line-height: 2em;
+        font-size: 1.25rem;
+    }
+    .intro .columnRight .data{
+        margin-right: 2em;
+    }
+
+
+
+    .gallery{
+        grid-template-columns: 40% 60%;
+    }
+    .gallery p{
+        font-size: 1.25rem;
+        text-align: justify;
+    }
+    .gallery li{
+        font-size: 1rem;
+    }
+
+    .gallery .columnLeft2{
+        padding: 1em;
+    }
+    .gallery .columnLeft2 h2{
+        margin: 0.3em 1.3em .3em;
+    }
+    .gallery .columnLeft2 li{
+        margin-left: 1em;
+    }
+
+
+    .gallery .columnRight2{
+        padding: 1.2em;
+    }
+    .gallery .columnRight2 h2{
+        font-size: 2.25rem;
+    }
+    .gallery .columnRight2 h4{
+        margin: 0.4em;
+        font-size: 1.75rem;
+    }
+    .gallery .columnRight2 h5{
+        font-size: 24px;
+    }
+    .gallery .columnRight2 li{
+        margin-left: 1.25em;
+    }
+    .gallery .columnRight2 span{
+        font-size: 1em;
+    }
+
+
+
+    .footer{
+        padding-top: 6em;
+        padding-bottom: 6em;
+    }
+    .footer .button{
+        font-size: 1rem;
+        margin-right: 15em;
+        margin-left: 15em;
+        padding-top: 2.25em;
+        padding-right: 1em;
+        padding-bottom: 2.25em;
+        padding-left: 1em;
+    }
+    .contact-info h2{
+        font-size: 1.25rem;
+    }
+    .contact-info h4{
+        font-size: 1rem;
+    }
+    .notify img{
+        padding-left: 1%;
+        width: 9%;
+    }
+}
+
+@media (min-width:992px) and (max-width:1200px){
+    .intro .columnLeft{
+        padding: .5em;
+    }
+    .intro .columnLeft .profile{
+        width: 50%;
+    }
+    .intro .columnRight{
+        padding: .5em;
+        line-height: 2em;
+        font-size: 1.5rem;
+    }
+    .intro .columnRight .data{
+        margin-right: 3em;
+    }
+
+
+
+    .gallery{
+        grid-template-columns: 40% 60%;
+    }
+    .gallery p{
+        font-size: 1.25rem;
+        text-align: justify;
+    }
+    .gallery li{
+        font-size: 1rem;
+    }
+
+    .gallery .columnLeft2{
+        padding: 1em;
+    }
+    .gallery .columnLeft2 h2{
+        margin: 0.3em 1.3em .3em;
+    }
+    .gallery .columnLeft2 li{
+        margin-left: 2em;
+    }
+
+
+    .gallery .columnRight2{
+        padding: 1.2em;
+    }
+    .gallery .columnRight2 h2{
+        font-size: 2.25rem;
+    }
+    .gallery .columnRight2 h4{
+        margin: 0.4em;
+        font-size: 1.75rem;
+    }
+    .gallery .columnRight2 h5{
+        font-size: 24px;
+    }
+    .gallery .columnRight2 li{
+        margin-left: 1.25em;
+    }
+    .gallery .columnRight2 span{
+        font-size: 1em;
+    }
+
+
+
+    .footer{
+        padding-top: 6em;
+        padding-bottom: 6em;
+    }
+    .footer .button{
+        font-size: 1rem;
+        margin-right: 20em;
+        margin-left: 20em;
+        padding-top: 2.25em;
+        padding-right: 1em;
+        padding-bottom: 2.25em;
+        padding-left: 1em;
+    }
+    .contact-info h2{
+        font-size: 1.5rem;
+    }
+    .contact-info h4{
+        font-size: 1.2rem;
+    }
+    .notify img{
+        padding-left: 1%;
+        width: 9%;
+    }
+}
+
+@media (min-width:1200px) and (max-width:1400px){
+    .intro .columnLeft{
+        padding: .5em;
+    }
+    .intro .columnLeft .profile{
+        width: 50%;
+    }
+    .intro .columnRight{
+        padding: 1em;
+        line-height: 2.25em;
+        font-size: 1.5rem;
+    }
+    .intro .columnRight .data{
+        margin-right: 3em;
+    }
+
+
+
+    .gallery{
+        grid-template-columns: 40% 60%;
+    }
+    .gallery p{
+        font-size: 1.25rem;
+        text-align: justify;
+    }
+    .gallery li{
+        font-size: 1rem;
+    }
+
+    .gallery .columnLeft2{
+        padding: 1em;
+    }
+    .gallery .columnLeft2 h2{
+        margin: 0.3em 1.3em 1em;
+    }
+    .gallery .columnLeft2 li{
+        margin-left: 5em;
+    }
+
+
+    .gallery .columnRight2{
+        padding: 1.2em;
+    }
+    .gallery .columnRight2 h2{
+        font-size: 2.25rem;
+    }
+    .gallery .columnRight2 h4{
+        margin: 0.4em;
+        font-size: 1.75rem;
+    }
+    .gallery .columnRight2 h5{
+        font-size: 24px;
+    }
+    .gallery .columnRight2 li{
+        margin-left: 1.25em;
+    }
+    .gallery .columnRight2 span{
+        font-size: 1em;
+    }
+
+
+
+    .footer{
+        padding-top: 6em;
+        padding-bottom: 6em;
+    }
+    .footer .button{
+        margin-right: 25em;
+        margin-left: 25em;
+        padding-top: 2.25em;
+        padding-right: 1em;
+        padding-bottom: 2.25em;
+        padding-left: 1em;
+    }
+
+    
+}
+
+
+@media  (min-width:1400px){
+    .intro .columnLeft{
+        padding: .5em;
+    }
+    .intro .columnLeft .profile{
+        width: 40%;
+    }
+    .intro .columnRight{
+        padding: 1em;
+        line-height: 2.25em;
+        font-size: 1.5rem;
+    }
+    .intro .columnRight .data{
+        margin-right: 3em;
+    }
+
+
+
+    .gallery{
+        grid-template-columns: 40% 60%;
+    }
+    .gallery p{
+        font-size: 1.25rem;
+        text-align: justify;
+    }
+    .gallery li{
+        font-size: 1rem;
+    }
+
+    .gallery .columnLeft2{
+        padding: 1em;
+    }
+    .gallery .columnLeft2 h2{
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .gallery .columnLeft2 li{
+        margin-left: 5em;
+    }
+
+
+    .gallery .columnRight2{
+        padding: 1.2em;
+    }
+    .gallery .columnRight2 h2{
+        font-size: 2.25rem;
+    }
+    .gallery .columnRight2 h4{
+        font-size: 1.75rem;
+    }
+    .gallery .columnRight2 h5{
+        font-size: 24px;
+    }
+    .gallery .columnRight2 li{
+        margin-left: 1.25em;
+    }
+    .gallery .columnRight2 span{
+        font-size: 1em;
+    }
+
+
+
+    .footer{
+        padding-top: 6em;
+        padding-bottom: 6em;
+    }
+    .footer .button{
+        font-size: 1rem;
+        margin-right: 30em;
+        margin-left: 30em;
+        padding-top: 2.25em;
+        padding-right: 1em;
+        padding-bottom: 2.25em;
+        padding-left: 1em;
+    }
+    .col.col-md-3{
+        padding: 2em;
+    }
+}
